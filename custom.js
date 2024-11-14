@@ -10,7 +10,7 @@ function setUserIdCookie(cookieValue) {
 }
 
 // Execute when the application has loaded
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("load", function() {
     const metabase_userid = window.Metabase.store.getState().currentUser.id || 0;
     setUserIdCookie(metabase_userid);
 });
