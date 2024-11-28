@@ -9,7 +9,7 @@
 function addMachtfitCss() {
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = '/mf-style.css'; // Adjust to the actual path to your stylesheet
+    link.href = '/metabase-custom/mf-style.css';
     document.head.appendChild(link);
 }
 
