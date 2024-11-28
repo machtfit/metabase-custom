@@ -1,0 +1,25 @@
+/* mf-style.css */
+
+.mf-notice {
+    background-color: red;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.mf-notice .mf-headline {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.mf-notice .mf-message {
+    font-size: 15px;
+    margin: 0;
+}
+
+.mf-notice .mf-message a {
+    font-weigh: bold;
+    text-decoration: underline;
+}
