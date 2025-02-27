@@ -47,7 +47,7 @@
 
 /* limit vertical size of filter */
 #Dashboard-Parameters-And-Cards-Container [data-testid="fixed-width-filters"] {
-    max-height: 53px;
+    max-height: 50px;
     overflow: scroll;
     transition: 0.5s;
 }
