@@ -1,5 +1,8 @@
 /* mf-style.css */
 
+/***************************************************** 
+ * Red notice on top of unsaved reports 
+ *****************************************************/
 .mf-notice {
     background-color: red;
     color: white;
@@ -22,4 +25,26 @@
 .mf-notice .mf-message a {
     font-weigh: bold;
     text-decoration: underline;
+}
+
+
+
+/***************************************************** 
+ * Tweaks to Dashboard Filters 
+ *****************************************************/
+/* limit vertical size of filter */
+#Dashboard-Parameters-And-Cards-Container [data-testid="fixed-width-filters"] {
+    max-height: 135px;
+    overflow: scroll;
+}
+
+/* keep the button on top */
+#Dashboard-Parameters-And-Cards-Container [data-testid="fixed-width-filters"] > button {
+	position: sticky;
+    top: 8px;
+}
+
+/* further highlight active filters */
+fieldset .emotion-8u4vwn {
+    background: #FFF;
 }
