@@ -44,6 +44,9 @@
     max-height: 400px;
     width: auto;
 }
+.popover.tether-element {
+    pointer-events: none;   
+}
 
 /* keep the button on top */
 #Dashboard-Parameters-And-Cards-Container [data-testid="fixed-width-filters"] > button {
