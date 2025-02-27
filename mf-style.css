@@ -34,8 +34,9 @@
  *****************************************************/
 /* limit vertical size of filter */
 #Dashboard-Parameters-And-Cards-Container [data-testid="fixed-width-filters"] {
-    max-height: 50px;
-    transition: all 0.5 ease-in-out;
+    overflow: hidden;
+    max-height: 55px;
+    transition: all 0.5s ease-in-out;
 
     --mask-stop: 90%;
     -webkit-mask-image: linear-gradient(to right, 
@@ -50,8 +51,9 @@
 }
 
 #Dashboard-Parameters-And-Cards-Container [data-testid="fixed-width-filters"]:hover {
-    max-height: 500px;
-    --mask-stop: 120%;
+    overflow: scroll;
+    max-height: 400px;
+    --mask-stop: 100%;
 }
 
 /* keep the button on top */
