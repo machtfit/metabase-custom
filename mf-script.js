@@ -95,6 +95,23 @@ function registerUrlChangeListener(urlChangeListenerFunction) {
 
 /**********************************************************
  * 
+ *  Filter PopUp Hover 
+ * 
+ **********************************************************/
+function registerFilterHoverHack) {
+    document.addEventListener('mouseover', (event) => {
+        const popup = document.querySelector('.popover');  // Get the popup element
+        const targetElement = document.querySelector("#Dashboard-Parameters-And-Cards-Container [data-testid='fixed-width-filters']");
+        if (targetElement) {
+            const isPopoverHovered = popup && (event.target === popup || popup.contains(event.target));
+            targetElement.classList.toggle('hovered', isPopoverHovered);
+        }
+    });
+}
+
+
+/**********************************************************
+ * 
  *  Execute on page load
  * 
  **********************************************************/
@@ -102,6 +119,7 @@ function initOnPageLoad() {
     addMachtfitCss();
     setUserIdCookie();
     checkAndDisplayNotice();
+    registerFilterHoverHack();
     registerUrlChangeListener(() => {
         checkAndDisplayNotice();
     });
