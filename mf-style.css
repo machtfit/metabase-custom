@@ -50,6 +50,6 @@
 }
 
 /* further highlight active filters */
-#Dashboard-Parameters-And-Cards-Container fieldset .emotion-8u4vwn {
-    background: #FFF;
+#Dashboard-Parameters-And-Cards-Container fieldset.emotion-8u4vwn {
+    background: white;
 }
