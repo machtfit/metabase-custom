@@ -32,19 +32,38 @@
 /***************************************************** 
  * Tweaks to Dashboard Filters 
  *****************************************************/
+/* some gradient when filters are too wide */
+#Dashboard-Parameters-And-Cards-Container {
+  -webkit-mask-image: linear-gradient(to right, 
+    rgba(0, 0, 0, 1) 90%, 
+    rgba(0, 0, 0, 0) 95%, 
+    rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(to right, 
+    rgba(0, 0, 0, 1) 90%, 
+    rgba(0, 0, 0, 0) 95%, 
+    rgba(0, 0, 0, 0) 100%);
+  background: transparent;
+}
+
 /* limit vertical size of filter */
 #Dashboard-Parameters-And-Cards-Container [data-testid="fixed-width-filters"] {
-    max-height: 70px;
+    max-height: 53px;
     overflow: scroll;
+    transition: 0.5s;
+}
+
+#Dashboard-Parameters-And-Cards-Container [data-testid="fixed-width-filters"]:hover {
+    max-height: 1000px;
+    overflow: hidden;
 }
 
 /* keep the button on top */
 #Dashboard-Parameters-And-Cards-Container [data-testid="fixed-width-filters"] > button {
-	position: sticky;
+    position: sticky;
     top: 8px;
 }
 
 /* further highlight active filters */
-fieldset .emotion-8u4vwn {
+#Dashboard-Parameters-And-Cards-Container fieldset .emotion-8u4vwn {
     background: #FFF;
 }
