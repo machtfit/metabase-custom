@@ -36,11 +36,13 @@
 #Dashboard-Parameters-And-Cards-Container [data-testid="fixed-width-filters"] {
     overflow: hidden;
     max-height: 55px;
+    width: 10000px;
     transition: all 0.5s ease-in-out;
 }
 #Dashboard-Parameters-And-Cards-Container [data-testid="fixed-width-filters"]:hover {
     overflow: scroll;
     max-height: 400px;
+    width: auto;
 }
 
 /* keep the button on top */
@@ -52,4 +54,5 @@
 /* further highlight active filters */
 #Dashboard-Parameters-And-Cards-Container fieldset.emotion-8u4vwn {
     background: white;
+    order: -1;
 }
