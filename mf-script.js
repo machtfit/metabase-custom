@@ -98,7 +98,7 @@ function registerUrlChangeListener(urlChangeListenerFunction) {
  *  Filter PopUp Hover 
  * 
  **********************************************************/
-function registerFilterHoverHack) {
+function registerFilterHoverHack() {
     document.addEventListener('mouseover', (event) => {
         const popup = document.querySelector('.popover');  // Get the popup element
         const targetElement = document.querySelector("#Dashboard-Parameters-And-Cards-Container [data-testid='fixed-width-filters']");
