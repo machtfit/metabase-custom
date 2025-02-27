@@ -43,22 +43,6 @@
     max-height: 400px;
 }
 
-#Dashboard-Parameters-And-Cards-Container [data-testid="fixed-width-filters"] > div {
-    --mask-stop: 90%;
-    -webkit-mask-image: linear-gradient(to right, 
-        rgba(0, 0, 0, 1) var(--mask-stop), 
-        rgba(0, 0, 0, 0) 95%, 
-        rgba(0, 0, 0, 0) 100%);
-    mask-image: linear-gradient(to right, 
-        rgba(0, 0, 0, 1) var(--mask-stop), 
-        rgba(0, 0, 0, 0) 95%, 
-        rgba(0, 0, 0, 0) 100%);
-    background: transparent;
-}
-#Dashboard-Parameters-And-Cards-Container [data-testid="fixed-width-filters"]:hover > div {
-    --mask-stop: 100%;
-}
-
 /* keep the button on top */
 #Dashboard-Parameters-And-Cards-Container [data-testid="fixed-width-filters"] > button {
     position: sticky;
