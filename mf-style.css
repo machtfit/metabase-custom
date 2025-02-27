@@ -37,7 +37,13 @@
     overflow: hidden;
     max-height: 55px;
     transition: all 0.5s ease-in-out;
+}
+#Dashboard-Parameters-And-Cards-Container [data-testid="fixed-width-filters"]:hover {
+    overflow: scroll;
+    max-height: 400px;
+}
 
+#Dashboard-Parameters-And-Cards-Container [data-testid="fixed-width-filters"] > div {
     --mask-stop: 90%;
     -webkit-mask-image: linear-gradient(to right, 
         rgba(0, 0, 0, 1) var(--mask-stop), 
@@ -49,10 +55,7 @@
         rgba(0, 0, 0, 0) 100%);
     background: transparent;
 }
-
-#Dashboard-Parameters-And-Cards-Container [data-testid="fixed-width-filters"]:hover {
-    overflow: scroll;
-    max-height: 400px;
+#Dashboard-Parameters-And-Cards-Container [data-testid="fixed-width-filters"]:hover > div {
     --mask-stop: 100%;
 }
 
