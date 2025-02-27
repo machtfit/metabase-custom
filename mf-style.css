@@ -39,7 +39,8 @@
     width: 10000px;
     transition: all 0.5s ease-in-out;
 }
-#Dashboard-Parameters-And-Cards-Container [data-testid="fixed-width-filters"]:hover {
+#Dashboard-Parameters-And-Cards-Container [data-testid="fixed-width-filters"]:hover,
+#Dashboard-Parameters-And-Cards-Container [data-testid="fixed-width-filters"].hovered {
     overflow: scroll;
     max-height: 400px;
     width: auto;
