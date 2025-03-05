@@ -33,6 +33,7 @@
  * Tweaks to Dashboard Filters 
  *****************************************************/
 /* limit vertical size of filter */
+/*
 #Dashboard-Parameters-And-Cards-Container [data-testid="fixed-width-filters"] {
     overflow: hidden;
     max-height: 55px;
@@ -48,15 +49,20 @@
 .popover.tether-element {
     pointer-events: none;   
 }
+*/
 
 /* keep the button on top */
+/*
 #Dashboard-Parameters-And-Cards-Container [data-testid="fixed-width-filters"] > button {
     position: sticky;
     top: 8px;
 }
+*/
 
 /* further highlight active filters */
+/*
 #Dashboard-Parameters-And-Cards-Container fieldset.emotion-8u4vwn {
     background: rgb(80 158 227 / 5%);
     order: -1;
 }
+*/
