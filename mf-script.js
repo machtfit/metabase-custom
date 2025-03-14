@@ -112,6 +112,69 @@ function registerFilterHoverHack() {
 
 /**********************************************************
  * 
+ *  Allow Markdown Links everywhere (especially field descriptions)
+ * 
+ **********************************************************/
+(function () {
+  function convertMarkdownLinks(root = document) {
+    const regex = /\[([^\]]+)\]\((https?:\/\/[^\)]+)\)/g;
+
+    function processNode(node) {
+      if (node.nodeType === Node.TEXT_NODE) {
+        let parent = node.parentNode;
+
+        // Ignore input and textarea fields
+        if (parent.tagName === "TEXTAREA" || parent.tagName === "INPUT") {
+          return;
+        }
+
+        let newContent = node.nodeValue;
+        if (regex.test(newContent)) {
+          const tempDiv = document.createElement("div");
+          tempDiv.innerHTML = newContent.replace(
+            regex,
+            `<a href="$2" target="_blank" rel="noopener noreferrer" class="customer_markdown_links">$1</a>`
+          );
+
+          // Replace text node with new HTML
+          while (tempDiv.firstChild) {
+            parent.insertBefore(tempDiv.firstChild, node);
+          }
+          parent.removeChild(node);
+        }
+      } else if (node.nodeType === Node.ELEMENT_NODE) {
+        // Skip inputs and textareas entirely
+        if (node.tagName !== "TEXTAREA" && node.tagName !== "INPUT") {
+          node.childNodes.forEach(processNode);
+        }
+      }
+    }
+
+    processNode(root);
+  }
+
+  // Initial conversion
+  convertMarkdownLinks(document.body);
+
+  // Observe for dynamically added content
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      mutation.addedNodes.forEach((node) => {
+        if (node.nodeType === Node.ELEMENT_NODE) {
+          convertMarkdownLinks(node);
+        }
+      });
+    });
+  });
+
+  observer.observe(document.body, { childList: true, subtree: true });
+})();
+
+
+
+
+/**********************************************************
+ * 
  *  Execute on page load
  * 
  **********************************************************/
