@@ -28,6 +28,17 @@
 }
 
 
+/***************************************************** 
+ * Markdown Links in Descriptions
+ *****************************************************/
+a.customer_markdown_links {
+    color: #509ee3;
+    text-decoration: none;
+}
+a.customer_markdown_links:hover {
+    text-decoration: underline;
+}
+
 
 /***************************************************** 
  * Tweaks to Dashboard Filters 
