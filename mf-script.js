@@ -126,7 +126,10 @@ function registerMarkdownLinkConverter() {
                 console.log (node.parentNode);
                 
                 // Ignore input and textarea fields
-                if (parent. tagName === "TEXTAREA" || parent.tagName === "INPUT" || parent.getAttribute("data-grid-cell-content") === "true") {
+                if (parent. tagName === "TEXTAREA"
+                    || parent.tagName === "INPUT"
+                    || parent.closest('div[data-testid="native-query-editor-container"]')
+                ) {
                     return;
                 }
 
