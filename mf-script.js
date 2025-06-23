@@ -123,8 +123,10 @@ function registerMarkdownLinkConverter() {
             if (node.nodeType === Node.TEXT_NODE) {
                 let parent = node.parentNode;
 
+                console.log (node.parentNode);
+                
                 // Ignore input and textarea fields
-                if (parent.tagName === "TEXTAREA" || parent.tagName === "INPUT") {
+                if (parent. tagName === "TEXTAREA" || parent.tagName === "INPUT" || parent.classList.contains("cm-line")) {
                     return;
                 }
 
