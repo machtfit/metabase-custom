@@ -117,7 +117,7 @@ function registerFilterHoverHack() {
  **********************************************************/
 function registerMarkdownLinkConverter() {
     function convertMarkdownLinks(root = document) {
-        const regex = /(?<!["'<>])\[(.*?)\]\((https?:\/\/[^\s)]+)\)(?!["'])/g;
+        const regex = /\[([a-zA-Z0-9äöüÄÖÜßéèê \-']+)\]\((https?:\/\/[^\s)]+)\)/g;
 
         function processNode(node) {
             if (node.nodeType === Node.TEXT_NODE) {
