@@ -77,3 +77,11 @@ a.customer_markdown_links:hover {
     order: -1;
 }
 */
+
+
+/***************************************************** 
+ * Remove "Powered by Metabase"-footer
+ *****************************************************/
+footer[data-testid="embed-frame-footer"] {
+  display: none !important;
+}
