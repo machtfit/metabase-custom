@@ -2,6 +2,16 @@
 
 /**********************************************************
  * 
+ *  Delete Metabase footer when page is embedded
+ *  Nov 2025 - Mathias Nitzsche
+ * 
+ **********************************************************/
+function deletePoweredByMatabaseInEmbeddings() {
+    document.querySelector('footer[data-testid="embed-frame-footer"]').remove();
+}
+
+/**********************************************************
+ * 
  *  Dynamically add the external stylesheet link to the <head>
  *  Nov 2024 - Mathias Nitzsche
  * 
@@ -203,6 +213,7 @@ function initOnPageLoad() {
     });
 
     registerMarkdownLinkConverter();
+    deletePoweredByMatabaseInEmbeddings();
 }
 
 // Check the URL when the page loads
