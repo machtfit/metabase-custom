@@ -7,7 +7,7 @@
  * 
  **********************************************************/
 function deletePoweredByMatabaseInEmbeddings() {
-    document.querySelector('footer[data-testid="embed-frame-footer"]').remove();
+    document.querySelector('footer[data-testid="embedding-footer"]').remove();
 }
 
 /**********************************************************
